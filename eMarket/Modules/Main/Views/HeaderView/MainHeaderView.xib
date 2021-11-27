@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainHeaderView" customModule="eMarket" customModuleProvider="target">
+            <connections>
+                <outlet property="addToCartButton" destination="56I-ta-v52" id="hi2-GV-yrc"/>
+                <outlet property="productCountLabel" destination="Ije-Hc-EOC" id="2j2-ch-6tg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eMarket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dN-Ek-RDu">
+                    <rect key="frame" x="150" y="16" width="75.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" name="headerTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56I-ta-v52">
+                    <rect key="frame" x="319" y="0.0" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="56I-ta-v52" secondAttribute="height" id="lTd-hE-ncX"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="gotoCartAction" destination="-1" eventType="touchUpInside" id="jSc-YQ-hdB"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCart" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-EI-Nb7">
+                    <rect key="frame" x="331" y="6" width="32" height="44"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ije-Hc-EOC">
+                    <rect key="frame" x="349.5" y="7.5" width="19.5" height="19.5"/>
+                    <color key="backgroundColor" name="textBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ije-Hc-EOC" secondAttribute="height" id="e3k-gq-32Z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" name="headerTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="headerColor"/>
+            <constraints>
+                <constraint firstItem="1eo-EI-Nb7" firstAttribute="top" secondItem="56I-ta-v52" secondAttribute="top" constant="6" id="BQv-37-hhP"/>
+                <constraint firstAttribute="bottom" secondItem="56I-ta-v52" secondAttribute="bottom" id="CAy-xU-7m0"/>
+                <constraint firstItem="2dN-Ek-RDu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DwX-7z-3ut"/>
+                <constraint firstItem="Ije-Hc-EOC" firstAttribute="centerY" secondItem="56I-ta-v52" secondAttribute="centerY" multiplier="0.618" id="MVc-rs-zfd"/>
+                <constraint firstItem="2dN-Ek-RDu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="O5b-ld-rUu"/>
+                <constraint firstItem="1eo-EI-Nb7" firstAttribute="bottom" secondItem="56I-ta-v52" secondAttribute="bottom" constant="-6" id="Yx4-4W-PNw"/>
+                <constraint firstItem="56I-ta-v52" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZSs-Ea-biZ"/>
+                <constraint firstItem="1eo-EI-Nb7" firstAttribute="trailing" secondItem="56I-ta-v52" secondAttribute="trailing" constant="-12" id="bKQ-Bh-hyg"/>
+                <constraint firstItem="1eo-EI-Nb7" firstAttribute="leading" secondItem="56I-ta-v52" secondAttribute="leading" constant="12" id="cwX-H4-9qJ"/>
+                <constraint firstAttribute="trailing" secondItem="56I-ta-v52" secondAttribute="trailing" id="gtk-0B-7eK"/>
+                <constraint firstItem="Ije-Hc-EOC" firstAttribute="width" secondItem="56I-ta-v52" secondAttribute="width" multiplier="0.35" id="qRF-zw-l5q"/>
+                <constraint firstItem="Ije-Hc-EOC" firstAttribute="trailing" secondItem="1eo-EI-Nb7" secondAttribute="trailing" constant="6" id="xce-59-ELj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.40000000000001" y="-12.593703148425789"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconCart" width="96" height="96"/>
+        <namedColor name="headerColor">
+            <color red="0.082000002264976501" green="0.6589999794960022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="headerTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textBackgroundColor">
+            <color red="0.98400002717971802" green="0.51399999856948853" blue="0.035000000149011612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

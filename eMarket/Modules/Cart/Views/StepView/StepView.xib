@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepView" customModule="eMarket" customModuleProvider="target">
+            <connections>
+                <outlet property="valueButton" destination="Egz-YE-Uba" id="BZG-sN-LFX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="223" height="62"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-7O-L6X">
+                    <rect key="frame" x="1" y="1" width="221" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ile-CU-kHC">
+                            <rect key="frame" x="0.0" y="0.0" width="221" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJs-M6-QaN">
+                                    <rect key="frame" x="0.0" y="0.0" width="71" height="60"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="-" image="iconSub" backgroundImage="buttonBG">
+                                        <color key="titleColor" name="cellTitleColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="subAction" destination="-1" eventType="touchUpInside" id="eoi-Hw-b0O"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egz-YE-Uba">
+                                    <rect key="frame" x="72" y="0.0" width="77" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="1" backgroundImage="buttonBG">
+                                        <color key="titleColor" name="cellTitleColor"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6w-Pr-U7n">
+                                    <rect key="frame" x="150" y="0.0" width="71" height="60"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="iconAdd" backgroundImage="buttonBG">
+                                        <color key="titleColor" name="cellTitleColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="plusAction" destination="-1" eventType="touchUpInside" id="drd-bM-QXj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="vJs-M6-QaN" firstAttribute="width" secondItem="r6w-Pr-U7n" secondAttribute="width" id="D1y-cb-3On"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Egz-YE-Uba" firstAttribute="width" secondItem="Dhn-7O-L6X" secondAttribute="width" multiplier="0.35" id="3Mu-Yt-2dh"/>
+                        <constraint firstAttribute="trailing" secondItem="ile-CU-kHC" secondAttribute="trailing" id="JmR-17-O24"/>
+                        <constraint firstItem="ile-CU-kHC" firstAttribute="top" secondItem="Dhn-7O-L6X" secondAttribute="top" id="dI0-Gp-9Ze"/>
+                        <constraint firstItem="ile-CU-kHC" firstAttribute="leading" secondItem="Dhn-7O-L6X" secondAttribute="leading" id="dh6-Wh-Hpd"/>
+                        <constraint firstAttribute="bottom" secondItem="ile-CU-kHC" secondAttribute="bottom" id="vs2-Ov-LTe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="lineColor"/>
+            <constraints>
+                <constraint firstItem="Dhn-7O-L6X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="hwp-c9-kmx"/>
+                <constraint firstAttribute="bottom" secondItem="Dhn-7O-L6X" secondAttribute="bottom" constant="1" id="jHR-Kn-5sc"/>
+                <constraint firstItem="Dhn-7O-L6X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="oPw-z1-scN"/>
+                <constraint firstAttribute="trailing" secondItem="Dhn-7O-L6X" secondAttribute="trailing" constant="1" id="t4h-QD-sys"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="10.4" y="194.30284857571215"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="buttonBG" width="5" height="5"/>
+        <image name="iconAdd" width="96" height="96"/>
+        <image name="iconSub" width="96" height="96"/>
+        <namedColor name="cellTitleColor">
+            <color red="0.054999999701976776" green="0.063000001013278961" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lineColor">
+            <color red="0.93699997663497925" green="0.94099998474121094" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

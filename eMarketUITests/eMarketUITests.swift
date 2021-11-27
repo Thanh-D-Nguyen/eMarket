@@ -22,15 +22,46 @@ class eMarketUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    
+    func testOrderOneProductFollow() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        if app.staticTexts["ProductCountLabel"].exists {
+            app.buttons["ShowYourCart"].tap()
+            app.buttons["Checkout"].tap()
+            app.buttons["Back To Home"].tap()
+        }
+        app.collectionViews.cells["ProductItemCell0"].buttons["Add to cart"].tap()
+        app.buttons["ShowYourCart"].tap()
+        XCTAssertTrue(app.staticTexts["TotalPriceLabel"].exists)
+        app.buttons["Checkout"].tap()
+        app.buttons["Back To Home"].tap()
     }
-
+    
+    func testOrderTwoProductAndQuantity() throws {
+        let app = XCUIApplication()
+        app.launch()
+        if app.staticTexts["ProductCountLabel"].exists {
+            app.buttons["ShowYourCart"].tap()
+            app.buttons["Checkout"].tap()
+            app.buttons["Back To Home"].tap()
+        }
+        let collectionViewsQuery = app.collectionViews
+        collectionViewsQuery.cells["ProductItemCell0"].buttons["Add to cart"].tap()
+        collectionViewsQuery.cells["ProductItemCell1"].buttons["Add to cart"].tap()
+        app.buttons["ShowYourCart"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery.cells["CartItemCell0"].buttons["iconAdd"].tap()
+        tablesQuery.cells["CartItemCell1"].buttons["iconAdd"].tap()
+        XCTAssertTrue(app.buttons["Checkout"].staticTexts["Checkout(4)"].exists)
+        app.buttons["Checkout"].tap()
+        app.buttons["Back To Home"].tap()
+        
+        
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

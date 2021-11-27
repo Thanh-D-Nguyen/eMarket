@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditAddressView" customModule="eMarket" customModuleProvider="target">
+            <connections>
+                <outlet property="addressTextField" destination="gnL-Sv-IBe" id="Lpt-nX-u94"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGK-B0-SZL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-rW-PoE">
+                            <rect key="frame" x="8" y="160" width="304" height="38"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel" backgroundImage="buyButtonBG">
+                                <color key="titleColor" name="headerTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction" destination="-1" eventType="touchUpInside" id="ReL-DK-XkX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="tableBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Rka-rW-PoE" firstAttribute="width" secondItem="Rka-rW-PoE" secondAttribute="height" multiplier="16:2" id="Ns7-uT-nBF"/>
+                    </constraints>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-Rf-A22" userLabel="HeaderView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                    <color key="backgroundColor" name="headerColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Your delivery address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOc-fn-pkx">
+                    <rect key="frame" x="8" y="32" width="165" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" name="cellTitleColor2"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mO1-qn-Qq8">
+                    <rect key="frame" x="0.0" y="52" width="320" height="52"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnL-Sv-IBe">
+                            <rect key="frame" x="8" y="8" width="304" height="36"/>
+                            <color key="textColor" name="cellTitleColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" name="cellColor"/>
+                    <constraints>
+                        <constraint firstItem="gnL-Sv-IBe" firstAttribute="top" secondItem="mO1-qn-Qq8" secondAttribute="top" constant="8" id="4rA-y3-zQk"/>
+                        <constraint firstItem="gnL-Sv-IBe" firstAttribute="leading" secondItem="mO1-qn-Qq8" secondAttribute="leading" constant="8" id="BJM-I6-PYj"/>
+                        <constraint firstAttribute="trailing" secondItem="gnL-Sv-IBe" secondAttribute="trailing" constant="8" id="nuj-i7-1rC"/>
+                        <constraint firstAttribute="bottom" secondItem="gnL-Sv-IBe" secondAttribute="bottom" constant="8" id="sJ5-1o-U3w"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBF-AN-jwD">
+                    <rect key="frame" x="8" y="116" width="304" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jBF-AN-jwD" secondAttribute="height" multiplier="16:2" id="O7k-AC-Dro"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="OK" backgroundImage="buyButtonBG">
+                        <color key="titleColor" name="headerTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="changeAddressAction" destination="-1" eventType="touchUpInside" id="luU-ZP-ith"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jBF-AN-jwD" secondAttribute="trailing" constant="8" id="8cm-bI-Lz5"/>
+                <constraint firstItem="0g8-Rf-A22" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="52:320" id="9ta-Qd-8Uw"/>
+                <constraint firstItem="0g8-Rf-A22" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Brp-kC-94x"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mO1-qn-Qq8" secondAttribute="trailing" id="Fea-ed-fof"/>
+                <constraint firstItem="Rka-rW-PoE" firstAttribute="top" secondItem="jBF-AN-jwD" secondAttribute="bottom" constant="6" id="Hyf-bx-gOh"/>
+                <constraint firstItem="jBF-AN-jwD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="I2H-Ug-4p5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mGK-B0-SZL" secondAttribute="trailing" id="Kmv-pi-RFo"/>
+                <constraint firstItem="mGK-B0-SZL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NDx-6F-rlt"/>
+                <constraint firstAttribute="trailing" secondItem="0g8-Rf-A22" secondAttribute="trailing" id="Nls-Wb-Q20"/>
+                <constraint firstItem="Rka-rW-PoE" firstAttribute="leading" secondItem="jBF-AN-jwD" secondAttribute="leading" id="RN3-UM-iou"/>
+                <constraint firstItem="Rka-rW-PoE" firstAttribute="trailing" secondItem="jBF-AN-jwD" secondAttribute="trailing" id="bvj-XG-4d1"/>
+                <constraint firstItem="mGK-B0-SZL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="egG-1m-Q7f"/>
+                <constraint firstItem="mO1-qn-Qq8" firstAttribute="top" secondItem="0g8-Rf-A22" secondAttribute="bottom" id="kGA-UR-knR"/>
+                <constraint firstItem="mO1-qn-Qq8" firstAttribute="top" secondItem="fOc-fn-pkx" secondAttribute="bottom" constant="4" id="mzH-3s-l8b"/>
+                <constraint firstItem="0g8-Rf-A22" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="tvR-BY-DiW"/>
+                <constraint firstItem="mO1-qn-Qq8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uSj-27-W8H"/>
+                <constraint firstItem="mO1-qn-Qq8" firstAttribute="height" secondItem="0g8-Rf-A22" secondAttribute="height" id="vEH-9c-SPf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mGK-B0-SZL" secondAttribute="bottom" id="vVT-8Z-K2u"/>
+                <constraint firstItem="fOc-fn-pkx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="xoJ-cT-2CK"/>
+                <constraint firstItem="jBF-AN-jwD" firstAttribute="top" secondItem="mO1-qn-Qq8" secondAttribute="bottom" constant="12" id="zOK-yv-mHK"/>
+            </constraints>
+            <point key="canvasLocation" x="131.25" y="71.83098591549296"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="buyButtonBG" width="47" height="45"/>
+        <namedColor name="cellColor">
+            <color red="0.99599999189376831" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellTitleColor">
+            <color red="0.054999999701976776" green="0.063000001013278961" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cellTitleColor2">
+            <color red="0.16099999845027924" green="0.16899999976158142" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="headerColor">
+            <color red="0.082000002264976501" green="0.6589999794960022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="headerTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tableBackgroundColor">
+            <color red="0.92900002002716064" green="0.93300002813339233" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
