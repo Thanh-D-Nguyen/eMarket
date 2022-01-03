@@ -30,3 +30,9 @@
    + Test Data on cart
    + Test Follow Order 1 Product (UI Test)
    + Test Follow Order 2 products and each product with quatity 2
+   
+## 5. Video
+ https://www.youtube.com/watch?v=f1647l0fmR4
+
+   ----------
+   Note: No Mock API URL
